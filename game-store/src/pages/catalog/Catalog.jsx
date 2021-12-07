@@ -1,8 +1,17 @@
 import React from 'react';
 import { useQuery, gql } from "@apollo/client";
+import styled from 'styled-components';
 
 import Card from '../../components/card/Card';
-import './Catalog.css'
+
+const Catalog = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 32px 40px;
+  background: #E5E5E5;
+  padding: 40px 60px;
+`
 
 const CatalogScreen = () => {
   let cards = [];
@@ -36,11 +45,11 @@ const CatalogScreen = () => {
 
   return (
     <>
-      <div className="Catalog">
+      <Catalog>
         {cards.map((card) => (
-          <Card props={card}/>
+          <Card key={card.id} props={card}/>
         ))}
-      </div>
+      </Catalog>
     </>
   )
 }

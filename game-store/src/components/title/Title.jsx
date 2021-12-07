@@ -1,10 +1,21 @@
 import React from 'react';
-import './Title.css'
+import styled from 'styled-components';
 
-const Title = (props) => {
+const TitleEl = styled.h1`
+  font: inherit;
+  font-size: ${props => props.fontSize};
+  font-weight: 800;
+  line-height: 1.08;
+  color: ${props => props.color};
+  margin: 0;
+`
+
+const Title = ({children, ...props}) => {
   return (
     <>
-      <h1 className="Title">{props.children}</h1>
+      <TitleEl {...props}>
+        {children}
+      </TitleEl>
     </>
   )
 }

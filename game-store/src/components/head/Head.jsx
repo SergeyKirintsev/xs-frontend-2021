@@ -1,14 +1,30 @@
 import React from 'react';
+import {Link} from "react-router-dom";
+import styled from 'styled-components';
 
 import MainMenu from '../main-menu/MainMenu';
-import './Head.css'
+
+const Header = styled.header`
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 60px;
+
+  font-size: 18px;
+  line-height: 25px;
+`
+
+const Logo = styled(Link)`
+  font-weight: ${props => props.fontWeight};
+  cursor: pointer;
+  text-decoration: none;
+`
 
 const Head = () => {
   return (
-    <div className="Head">
-      <div className="Head-logo">Logo</div>
+    <Header>
+      <Logo to='/' fontWeight={800}>Logo</Logo>
       <MainMenu/>
-    </div>
+    </Header>
   )
 };
 

@@ -1,9 +1,0 @@
-.Catalog {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 32px 40px;
-    background: #E5E5E5;
-    padding: 40px 60px;
-}
