@@ -17,6 +17,7 @@ const Logo = styled(Link)`
   font-weight: ${props => props.fontWeight};
   cursor: pointer;
   text-decoration: none;
+  color: inherit;
 `
 
 const Head = () => {
