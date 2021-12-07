@@ -27,6 +27,7 @@ const MainMenuButton = styled.li`
 
 const MenuLink = styled(Link)`
   text-decoration: none;
+  color: inherit;
 `
 
 const MainMenu = () => {
